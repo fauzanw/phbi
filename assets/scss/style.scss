@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+$primary-color: #009341;
+$secondary-color: #fff5a6;
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color !important;
+}
+
+body {
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.navbar {
+    .navbar-toggler {
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .nav-item {
+        .nav-link {
+            color: rgb(186, 186, 186);
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.btn-custom {
+    padding: 1rem 2rem;
+    border-radius: 999px;
+    transition: .3s;
+}
+
+
+section {
+    .heading {
+        h3.title {
+            font-weight: 700;
+            color: $primary-color;
+        }
+    }
+    // start hero section
+    &.hero {
+        .container {
+            h1 {
+                font-weight: 800;
+            }
+            .btn-read-more {
+                @extend .btn-custom;
+                background-color: $primary-color;
+                color: white;
+            
+                &:hover {
+                    background-color: #00af4f;
+                    color: white;
+                    border: 1px solid #00af4f;
+                }
+            }
+            .btn-watch-video {
+                @extend .btn-custom;
+                background-color: transparent;
+                border: 1px solid rgb(192, 192, 192);
+                color: rgb(192, 192, 192);
+            
+                &:hover {
+                    border-color: $primary-color;
+                    color: $primary-color;
+                }
+            }
+
+            @media only screen and (max-width: 387px) {
+                .btn-read-more, .btn-watch-video {
+                    width: 100%;
+                }
+            }
+
+            .hero-illustration {
+                @media only screen and (max-width: 991px) {
+                    display: none !important;   
+                }
+
+                img {
+                    @media only screen and (min-width: 991px) {
+                        width: 400px !important;
+                    }
+
+                    @media only screen and (min-width: 1200px) {
+                        width: 600px !important;
+                    }
+                }
+            }
+        }
+
+    }
+    // end hero section
+    // start our team section
+    &.our-team {
+        .our-team-card {
+            text-align: center;
+
+            .pic {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                overflow: hidden;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                &:before, &:after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                &:after {
+                    // background:;
+                    border:2px solid rgb(239, 239, 239);
+                    z-index: 1;
+                }
+                
+                img {
+                    background-color: $secondary-color;
+                    border-radius: 50%;
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+
+            .title {
+                font-size: 26px;
+                font-weight: bold;
+                color: #222;
+                // padding-bottom: 10px;
+                margin: 15px 0 5px 0;
+                position: relative;
+            }
+
+            .post {
+                display: block;
+                font-size: 16px;
+                color: #777;
+            }
+        }
+    }
+    // end out team section
+
+    // start dakwah content
+    &.article {
+        .card-article {
+            border: none;
+            h5 {
+                font-size: 0.5rem;
+            }
+        }
+    }
+}
