@@ -189,5 +189,18 @@ section {
             overflow: hidden;
             z-index: 1;
         }
+
+        .heading {
+            h3 {
+                @media only screen and (max-width: 991px) {
+                    font-size: calc(0.8rem + .4vw) !important;
+                    margin-bottom: 20px;
+                }
+
+                @media only screen and (min-width: 992px) {
+                    margin-bottom: 50px;
+                }
+            }
+        }
     }
 }
