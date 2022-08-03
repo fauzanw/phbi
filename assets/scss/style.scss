@@ -167,5 +167,27 @@ section {
                 font-size: 0.5rem;
             }
         }
+
+        .list-group {
+            .list-group-item {
+                transition: .8s;
+                &:hover {
+                    background-color: rgb(234, 234, 234);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &.video-dakwah {
+        .carousel {
+            border-radius: 25px;
+        }
+
+        .video-container {
+            border-radius: 10px;
+            overflow: hidden;
+            z-index: 1;
+        }
     }
 }

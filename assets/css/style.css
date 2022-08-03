@@ -126,3 +126,18 @@ section.article .card-article {
 section.article .card-article h5 {
   font-size: 0.5rem;
 }
+section.article .list-group .list-group-item {
+  transition: 0.8s;
+}
+section.article .list-group .list-group-item:hover {
+  background-color: rgb(234, 234, 234);
+  cursor: pointer;
+}
+section.video-dakwah .carousel {
+  border-radius: 25px;
+}
+section.video-dakwah .video-container {
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
